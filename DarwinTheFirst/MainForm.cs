@@ -18,7 +18,25 @@ namespace DarwinTheFirst
         {
             InitializeComponent();
 
-            simulation = new BasicSimulation();
+            String[] args = Environment.GetCommandLineArgs();
+
+            for (int i = 0; i < args.Length; i++)
+            {
+                switch (args[i].ToLower())
+                {
+                    case "basic":
+                        simulation = new BasicSimulation();
+                        break;
+                    case "bg":
+                    case "basicgenetic":
+                        simulation = new BasicGeneticSimulation();
+                        break;
+                }
+            }
+            if (simulation == null)
+            {
+                simulation = new BasicGeneticSimulation();
+            }
             simulation.StartSimulation();
 
             repaintTimer.Start();

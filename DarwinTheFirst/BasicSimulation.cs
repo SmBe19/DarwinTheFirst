@@ -9,7 +9,6 @@ namespace DarwinTheFirst
     class BasicSimulation : Simulation
     {
         private List<int> Values;
-        private Random random;
 
         public List<int> ValuesT
         {
@@ -26,7 +25,6 @@ namespace DarwinTheFirst
             {
                 Values.Add(i);
             }
-            random = new Random();
         }
 
         protected override SimulationDrawer CreateSimulationDrawer()

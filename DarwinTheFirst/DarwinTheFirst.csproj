@@ -44,8 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base.cs" />
+    <Compile Include="BaseInstance.cs" />
+    <Compile Include="BasicGeneticSimulation.cs" />
+    <Compile Include="BasicGeneticSimulationDrawer.cs" />
     <Compile Include="BasicSimulation.cs" />
     <Compile Include="BasicSimulationDrawer.cs" />
+    <Compile Include="GeneticSimulation.cs" />
+    <Compile Include="Genom.cs" />
+    <Compile Include="GenomInstance.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +87,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BasicGeneticSimulationGenom.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

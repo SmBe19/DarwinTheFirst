@@ -15,6 +15,8 @@ namespace DarwinTheFirst
         private SimulationDrawer SimulationDrawerBacking;
         private int LastStep;
 
+        public static Random random = new Random();
+
         public SimulationDrawer SimulationDrawerT
         {
             get
